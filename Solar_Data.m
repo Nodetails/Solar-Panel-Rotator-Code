@@ -222,226 +222,218 @@ end
 
 %----------------------------------------%
 
-% figure(1)
-% subplot(2,1,1)
-% hold on
-% plot(f(1,:),'r','LineWidth',1.6)
-% plot(f(2,:),'g','LineWidth',1.6)
-% plot(f(3,:),'b','LineWidth',1.6)
-% plot(f(4,:),'c','LineWidth',1.6)
-% plot(f(5,:),'m','LineWidth',1.6)
-% plot(f(6,:),'k','LineWidth',1.8)
-% 
-% % xlabel('Time (starting from 6 AM to 8 PM PST)')
-% % ylabel('Voltage')
-% % title('Voltage Readings at 0^{\circ}')
-% % legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg')
-% 
-% % figure(2)
-% % hold on
-% 
-% subplot(2,1,2)
-% hold on
-% plot(f(7,:),'r','LineWidth',1.6)
-% plot(f(8,:),'g','LineWidth',1.6)
-% plot(f(9,:),'b','LineWidth',1.6)
-% plot(f(10,:),'c','LineWidth',1.6)
-% plot(f(11,:),'m','LineWidth',1.6)
-% plot(f(12,:),'k','LineWidth',1.8)
-% 
-% % xlabel('Time (starting from 6 AM to 8 PM PST)')
-% % ylabel('Voltage')
-% % title('Voltage Readings at 45^{\circ}')
-% % legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg')
-% 
-% figure(2)
-% hold on
-% plot(f(13,:),'r','LineWidth',1.6)
-% plot(f(14,:),'g','LineWidth',1.6)
-% plot(f(15,:),'b','LineWidth',1.6)
-% plot(f(16,:),'c','LineWidth',1.6)
-% plot(f(17,:),'m','LineWidth',1.6)
-% plot(f(18,:),'k','LineWidth',1.8)
-% 
-% % xlabel('Time (starting from 6 AM to 8 PM PST)')
-% % ylabel('Voltage')
-% % title('Voltage Readings at 90^{\circ}')
-% % legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg','Location','South')
-% 
-% figure(3)
-% subplot(2,1,1)
-% hold on
-% plot(f(19,:),'r','LineWidth',1.6)
-% plot(f(20,:),'g','LineWidth',1.6)
-% plot(f(21,:),'b','LineWidth',1.6)
-% plot(f(22,:),'c','LineWidth',1.6)
-% plot(f(23,:),'m','LineWidth',1.6)
-% plot(f(24,:),'k','LineWidth',1.8)
-% 
-% % xlabel('Time (starting from 6 AM to 8 PM PST)')
-% % ylabel('Voltage')
-% % title('Voltage Readings at 135^{\circ}')
-% % legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg','Location','SouthEast')
-% 
-% % figure(5)
-% 
-% 
-% subplot(2,1,2)
-% hold on
-% 
-% plot(f(25,:),'r','LineWidth',1.6)
-% plot(f(26,:),'g','LineWidth',1.6)
-% plot(f(27,:),'b','LineWidth',1.6)
-% plot(f(28,:),'c','LineWidth',1.6)
-% plot(f(29,:),'m','LineWidth',1.6)
-% plot(f(30,:),'k','LineWidth',1.8)
+figure(1)
+hold on
+plot(f(1,:),'r','LineWidth',1.6)
+plot(f(2,:),'g','LineWidth',1.6)
+plot(f(3,:),'b','LineWidth',1.6)
+plot(f(4,:),'c','LineWidth',1.6)
+plot(f(5,:),'m','LineWidth',1.6)
+plot(f(6,:),'k','LineWidth',1.8)
 
-% xlabel('Time (starting from 6 AM to 8 PM PST)')
-% ylabel('Voltage')
-% title('Voltage Readings at 180^{\circ}')
-% legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg','Location','SouthEast')
+xlabel('Time (starting from 6 AM to 8 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 0^{\circ}')
+legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg')
 
-% figure(6)
-% surf(BigT)
-% colorbar
-% title('Solar Voltage Data Interpolated from Average Data at Specified Locations(Summer)')
-% xlabel('Pitch ({\circ})')
-% ylabel('Time (starting from 6 AM to 8 PM PST on July 14-15)')
-% zlabel('Voltage (V)')
-% 
-% 
-% A = [2,22,29,33,37,42,52,75,109,129,139,146,151,159,176];
-% 
-% figure(7)
-% hold on
-% plot(Time,A)
-% plot(Time,Orien,'r')
-% xlabel('Time(starting from 6 AM to 8 PM PST on July 14-15)')
-% ylabel('Pitch ({\circ})')
-% title('Optimal Pitch Ang. at each Hour')
-% legend('3rd degree fit','4th degree fit','Location','SouthEast')
-% 
-% 
-% figure(8)
-% hold on
-% 
-% plot(fW(1,:),'r','LineWidth',1.6)
-% plot(fW(2,:),'b','LineWidth',1.6)
-% plot(fW(3,:),'k','LineWidth',1.8)
-% 
-% xlabel('Time (starting from 8 AM to 5 PM PST)')
-% ylabel('Voltage')
-% title('Voltage Readings at 0^{\circ}')
-% legend('Panel A','Panel C','Avg')
-% 
-% figure(9)
-% hold on
-% 
-% plot(fW(4,:),'r','LineWidth',1.6)
-% plot(fW(5,:),'b','LineWidth',1.6)
-% plot(fW(6,:),'k','LineWidth',1.8)
-% 
-% xlabel('Time (starting from 8 AM to 5 PM PST)')
-% ylabel('Voltage')
-% title('Voltage Readings at 45^{\circ}')
-% legend('Panel D','Panel E','Avg')
-% 
-% figure(10)
-% hold on
-% 
-% plot(fW(7,:),'r','LineWidth',1.6)
-% plot(fW(8,:),'b','LineWidth',1.6)
-% plot(fW(9,:),'k','LineWidth',1.8)
-% 
-% xlabel('Time (starting from 8 AM to 5 PM PST)')
-% ylabel('Voltage')
-% title('Voltage Readings at 90^{\circ}')
-% legend('Panel A','Panel C','Avg')
-% 
-% figure(11)
-% hold on
-% 
-% plot(fW(10,:),'r','LineWidth',1.6)
-% plot(fW(11,:),'b','LineWidth',1.6)
-% plot(fW(12,:),'k','LineWidth',1.8)
-% 
-% xlabel('Time (starting from 8 AM to 5 PM PST)')
-% ylabel('Voltage')
-% title('Voltage Readings at 135^{\circ}')
-% legend('Panel D','Panel E','Avg')
-% 
-% figure(12)
-% hold on
-% 
-% plot(fW(13,:),'r','LineWidth',1.6)
-% plot(fW(14,:),'b','LineWidth',1.6)
-% plot(fW(15,:),'k','LineWidth',1.8)
-% 
-% xlabel('Time (starting from 8 AM to 5 PM PST)')
-% ylabel('Voltage')
-% title('Voltage Readings at 180^{\circ}')
-% legend('Panel A','Panel C','Avg')
-% 
-% figure(13)
-% surf(BigTWW)
-% colorbar
-% title('Solar Voltage Data Interpolated from Average Data at Specified Locations (Winter)')
-% xlabel('Full_Rot_Pitch ({\circ})')
-% ylabel('Time (starting from 8 AM to 5 PM PST on Jan 20)')
-% zlabel('Voltage (V)')
-% 
-% figure(14)
-% hold on
-% plot(Time,OrienWW)
-% xlabel('Time(starting from 8 AM to 5 PM PST on Jan 20)')
-% ylabel('Full_Rot_Pitch ({\circ})')
-% title('Optimal Full_Rot_Pitchs at each Time')
-% legend('4th degree fit','Location','SouthEast')
+figure(2)
+hold on
+plot(f(7,:),'r','LineWidth',1.6)
+plot(f(8,:),'g','LineWidth',1.6)
+plot(f(9,:),'b','LineWidth',1.6)
+plot(f(10,:),'c','LineWidth',1.6)
+plot(f(11,:),'m','LineWidth',1.6)
+plot(f(12,:),'k','LineWidth',1.8)
 
-% figure(15)
-% [C,h]=contour(Pitch)
-% clabel(C,h);
-% 
-% 
-% figure(16)
-% mesh(Pitch)
-% xlabel('Hour(6 AM to 8 PM PST)');
-% ylabel('Days')
-% zlabel('Pitch')
-% title('Optimal Pitch Angle Orientation for Solar Panel Throughout Year at Lat. 47\circ 16'' Long.-122\circ 8''')
-% 
-% figure(17)
-% mesh(Yaw)
-% title('Expected Solar Yaw Angles Throughout Year at Lat. 47\circ 16'' Long.-122\circ 8''')
-% xlabel('Hour(6 AM to 8 PM PST)')
-% ylabel('Days')
-% zlabel('Yaw')
-% 
-% figure(18)
-% mesh(Time,Yaw,Pitch)
-% xlabel('Hour(6 AM to 8 PM PST)')
-% ylabel('Yaw')
-% zlabel('Pitch')
-% title('Expected Pitch & Yaw Angles at Each Hour Per Day / Master Lookup - Table')
-% 
-% cc= hsv(13);
-% j=1;
-% 
-% figure(19)
-% grid on
-% hold on
-% for i = 1:1:13
-%     plot3(Time,Yaw(j,:),Pitch(j,:),'color',cc(i,:))
-%     j=j+30;
-% end
-% 
-% xlabel('Hour(6 AM to 8 PM PST)')
-% ylabel('Yaw')
-% zlabel('Pitch')
-% title('Expected Pitch & Yaw Angles at Each Hour Per 30 Day Intervals / Reduced Size Lookup-Table')
-% legend('Jul. 15', 'Aug. 14', 'Sept. 13', 'Oct. 13', 'Nov. 12',...
-%     'Dec. 12', 'Jan. 11', 'Feb. 10', 'Mar. 12', 'Apr. 11',...
-%     'May 11', 'Jun. 10')
+xlabel('Time (starting from 6 AM to 8 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 45^{\circ}')
+legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg')
+
+figure(3)
+hold on
+plot(f(13,:),'r','LineWidth',1.6)
+plot(f(14,:),'g','LineWidth',1.6)
+plot(f(15,:),'b','LineWidth',1.6)
+plot(f(16,:),'c','LineWidth',1.6)
+plot(f(17,:),'m','LineWidth',1.6)
+plot(f(18,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 6 AM to 8 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 90^{\circ}')
+legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg','Location','South')
+
+figure(4)
+hold on
+plot(f(19,:),'r','LineWidth',1.6)
+plot(f(20,:),'g','LineWidth',1.6)
+plot(f(21,:),'b','LineWidth',1.6)
+plot(f(22,:),'c','LineWidth',1.6)
+plot(f(23,:),'m','LineWidth',1.6)
+plot(f(24,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 6 AM to 8 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 135^{\circ}')
+legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg','Location','SouthEast')
+
+figure(5)
+hold on
+
+plot(f(25,:),'r','LineWidth',1.6)
+plot(f(26,:),'g','LineWidth',1.6)
+plot(f(27,:),'b','LineWidth',1.6)
+plot(f(28,:),'c','LineWidth',1.6)
+plot(f(29,:),'m','LineWidth',1.6)
+plot(f(30,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 6 AM to 8 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 180^{\circ}')
+legend('Panel A','Panel B','Panel C','Panel D','Panel E','Avg','Location','SouthEast')
+
+figure(6)
+surf(BigT)
+colorbar
+title('Solar Voltage Data Interpolated from Average Data at Specified Locations(Summer)')
+xlabel('Pitch ({\circ})')
+ylabel('Time (starting from 6 AM to 8 PM PST on July 14-15)')
+zlabel('Voltage (V)')
+
+
+A = [2,22,29,33,37,42,52,75,109,129,139,146,151,159,176];
+
+figure(7)
+hold on
+plot(Time,A)
+plot(Time,Orien,'r')
+xlabel('Time(starting from 6 AM to 8 PM PST on July 14-15)')
+ylabel('Pitch ({\circ})')
+title('Optimal Pitch Ang. at each Hour')
+legend('3rd degree fit','4th degree fit','Location','SouthEast')
+
+
+figure(8)
+hold on
+
+plot(fW(1,:),'r','LineWidth',1.6)
+plot(fW(2,:),'b','LineWidth',1.6)
+plot(fW(3,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 8 AM to 5 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 0^{\circ}')
+legend('Panel A','Panel C','Avg')
+
+figure(9)
+hold on
+
+plot(fW(4,:),'r','LineWidth',1.6)
+plot(fW(5,:),'b','LineWidth',1.6)
+plot(fW(6,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 8 AM to 5 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 45^{\circ}')
+legend('Panel D','Panel E','Avg')
+
+figure(10)
+hold on
+
+plot(fW(7,:),'r','LineWidth',1.6)
+plot(fW(8,:),'b','LineWidth',1.6)
+plot(fW(9,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 8 AM to 5 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 90^{\circ}')
+legend('Panel A','Panel C','Avg')
+
+figure(11)
+hold on
+
+plot(fW(10,:),'r','LineWidth',1.6)
+plot(fW(11,:),'b','LineWidth',1.6)
+plot(fW(12,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 8 AM to 5 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 135^{\circ}')
+legend('Panel D','Panel E','Avg')
+
+figure(12)
+hold on
+
+plot(fW(13,:),'r','LineWidth',1.6)
+plot(fW(14,:),'b','LineWidth',1.6)
+plot(fW(15,:),'k','LineWidth',1.8)
+
+xlabel('Time (starting from 8 AM to 5 PM PST)')
+ylabel('Voltage')
+title('Voltage Readings at 180^{\circ}')
+legend('Panel A','Panel C','Avg')
+
+figure(13)
+surf(BigTWW)
+colorbar
+title('Solar Voltage Data Interpolated from Average Data at Specified Locations (Winter)')
+xlabel('Full_Rot_Pitch ({\circ})')
+ylabel('Time (starting from 8 AM to 5 PM PST on Jan 20)')
+zlabel('Voltage (V)')
+
+figure(14)
+hold on
+plot(Time,OrienWW)
+xlabel('Time(starting from 8 AM to 5 PM PST on Jan 20)')
+ylabel('Full Rot Pitch ({\circ})')
+title('Optimal Full Rot Pitchs at each Time')
+legend('4th degree fit','Location','SouthEast')
+
+figure(15)
+[C,h]=contour(Pitch)
+clabel(C,h);
+
+
+figure(16)
+mesh(Pitch)
+xlabel('Hour(6 AM to 8 PM PST)');
+ylabel('Days')
+zlabel('Pitch')
+title('Optimal Pitch Angle Orientation for Solar Panel Throughout Year at Lat. 47\circ 16'' Long.-122\circ 8''')
+
+figure(17)
+mesh(Yaw)
+title('Expected Solar Yaw Angles Throughout Year at Lat. 47\circ 16'' Long.-122\circ 8''')
+xlabel('Hour(6 AM to 8 PM PST)')
+ylabel('Days')
+zlabel('Yaw')
+
+figure(18)
+mesh(Time,Yaw,Pitch)
+xlabel('Hour(6 AM to 8 PM PST)')
+ylabel('Yaw')
+zlabel('Pitch')
+title('Expected Pitch & Yaw Angles at Each Hour Per Day / Master Lookup - Table')
+
+cc= hsv(13);
+j=1;
+
+figure(19)
+grid on
+hold on
+for i = 1:1:13
+    plot3(Time,Yaw(j,:),Pitch(j,:),'color',cc(i,:))
+    j=j+30;
+end
+
+xlabel('Hour(6 AM to 8 PM PST)')
+ylabel('Yaw')
+zlabel('Pitch')
+title('Expected Pitch & Yaw Angles at Each Hour Per 30 Day Intervals / Reduced Size Lookup-Table')
+legend('Jul. 15', 'Aug. 14', 'Sept. 13', 'Oct. 13', 'Nov. 12',...
+    'Dec. 12', 'Jan. 11', 'Feb. 10', 'Mar. 12', 'Apr. 11',...
+    'May 11', 'Jun. 10')
 
 %sets 1 at Jan. 1
 N_Pitch = zeros(365,15);
@@ -473,27 +465,27 @@ for i=1:1:length(N_Pitch)
 end
 % 
 % 
-% figure(20)
-% mesh(N_Yaw)
-% title('Expected Solar Yaw Angles Throughout Year at Lat. 47 \circ 16'' Long.-122\circ 8''')
-% xlabel('Hour(6 AM to 8 PM PST)')
-% ylabel('Days')
-% zlabel('Yaw')
-% % axis([0 15  0 365 -50 250 ])
+figure(20)
+mesh(N_Yaw)
+title('Expected Solar Yaw Angles Throughout Year at Lat. 47 \circ 16'' Long.-122\circ 8''')
+xlabel('Hour(6 AM to 8 PM PST)')
+ylabel('Days')
+zlabel('Yaw')
+axis([0 15  0 365 -50 250 ])
 
-% figure(21)
-% mesh(N_Pitch)
-% xlabel('Hour(6 AM to 8 PM PST)');
-% ylabel('Days')
-% zlabel('Pitch')
-% title('Optimal Pitch Angle Orientation for Solar Panel Throughout Year at Lat. 47\circ 16'' Long.-122\circ 8''')
+figure(21)
+mesh(N_Pitch)
+xlabel('Hour(6 AM to 8 PM PST)');
+ylabel('Days')
+zlabel('Pitch')
+title('Optimal Pitch Angle Orientation for Solar Panel Throughout Year at Lat. 47\circ 16'' Long.-122\circ 8''')
 
-% figure(22)
-% mesh(Time,N_Yaw,N_Pitch)
-% xlabel('Hour(6 AM to 8 PM PST)')
-% ylabel('Yaw')
-% zlabel('Pitch')
-% title('Expected Pitch & Yaw Angles at Each Hour Per Day / Master Lookup - Table')
+figure(22)
+mesh(Time,N_Yaw,N_Pitch)
+xlabel('Hour(6 AM to 8 PM PST)')
+ylabel('Yaw')
+zlabel('Pitch')
+title('Expected Pitch & Yaw Angles at Each Hour Per Day / Master Lookup - Table')
 cc= jet(13);
 j=1;
 % % 
@@ -570,38 +562,38 @@ zlabel('Pitch')
 title('Servo Pitch Angles Throughout Year at Lat. 47\circ 16'' Long.-122\circ 8''')
 axis([0 15  0 365 0 90 ])
 % 
-% figure(25)
-% mesh(Time,Ard_Yaw,Ard_Pitch)
-% xlabel('Hour(6 AM to 8 PM PST)')
-% ylabel('Yaw')
-% zlabel('Pitch')
-% title('Expected Pitch & Yaw Angles at Each Hour Per Day / Master Arduino Lookup - Table')
-% cc= jet(13);
-% j=1;
-% 
-% figure(26)
-% grid on
-% hold on
-% plot3(Time,Ard_Yaw(1,:),Ard_Pitch(1,:),'color',cc(1,:))
-% plot3(Time,Ard_Yaw(21,:),Ard_Pitch(21,:),'color',cc(2,:),'LineWidth',3)
-% 
-% for i = 3:1:7
-%     plot3(Time,Ard_Yaw(j+60,:),Ard_Pitch(j+60,:),'color',cc(i,:))
-%     j=j+30;
-% end
-% 
-% plot3(Time,Ard_Yaw(197,:),Ard_Pitch(197,:),'color',cc(8,:),'LineWidth',3)
-% j=1;
-% 
-% for i = 9:1:13
-%     plot3(Time,Ard_Yaw(j+240,:),Ard_Pitch(j+240,:),'color',cc(i,:))
-%     j=j+30;
-% end
-% 
-% xlabel('Hour(6 AM to 8 PM PST)')
-% ylabel('Yaw')
-% zlabel('Pitch')
-% title('Expected Pitch & Yaw Angles at Each Hour Per 30 Day Intervals / Reduced Size Arduino Lookup-Table')
-% legend('Jan. 1', 'Jan. 20', 'Mar. 2', 'Apr. 1', 'May 1',...
-%     'May 31', 'Jun. 30', 'Jul. 15', 'Aug. 29', 'Sept. 29',...
-%     'Oct. 28', 'Nov. 27', 'Dec. 27')
+figure(25)
+mesh(Time,Ard_Yaw,Ard_Pitch)
+xlabel('Hour(6 AM to 8 PM PST)')
+ylabel('Yaw')
+zlabel('Pitch')
+title('Expected Pitch & Yaw Angles at Each Hour Per Day / Master Arduino Lookup - Table')
+cc= jet(13);
+j=1;
+
+figure(26)
+grid on
+hold on
+plot3(Time,Ard_Yaw(1,:),Ard_Pitch(1,:),'color',cc(1,:))
+plot3(Time,Ard_Yaw(21,:),Ard_Pitch(21,:),'color',cc(2,:),'LineWidth',3)
+
+for i = 3:1:7
+    plot3(Time,Ard_Yaw(j+60,:),Ard_Pitch(j+60,:),'color',cc(i,:))
+    j=j+30;
+end
+
+plot3(Time,Ard_Yaw(197,:),Ard_Pitch(197,:),'color',cc(8,:),'LineWidth',3)
+j=1;
+
+for i = 9:1:13
+    plot3(Time,Ard_Yaw(j+240,:),Ard_Pitch(j+240,:),'color',cc(i,:))
+    j=j+30;
+end
+
+xlabel('Hour(6 AM to 8 PM PST)')
+ylabel('Yaw')
+zlabel('Pitch')
+title('Expected Pitch & Yaw Angles at Each Hour Per 30 Day Intervals / Reduced Size Arduino Lookup-Table')
+legend('Jan. 1', 'Jan. 20', 'Mar. 2', 'Apr. 1', 'May 1',...
+    'May 31', 'Jun. 30', 'Jul. 15', 'Aug. 29', 'Sept. 29',...
+    'Oct. 28', 'Nov. 27', 'Dec. 27')
