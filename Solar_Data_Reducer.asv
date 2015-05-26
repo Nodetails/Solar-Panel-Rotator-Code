@@ -1,0 +1,51 @@
+function [f,] = Solar_Data_Reducer( input_args )
+
+%Get panel size 
+Pan_Size = size(Panel);
+Size = Pan_Size(1);
+Avgs = zeros(1,5);
+
+%get Polyval data for each segment
+j=1;
+Fit = 4;
+for i = 1:1:Size 
+    p(j,:) = polyfit(Time,Panel(i,:),Fit);
+    f(j,:) = polyval(p(j,:),Time);
+    j=j+1;
+end
+
+%get location of average data and set up little T
+for i = 1:1:5
+    Avgs(i) = i*(Size / 5);
+    LitlT(:,i) = f(Avgs(i),:);
+end
+
+
+for i = 1:1:length(Time)
+    P(i,:) = polyfit(Minor_Orientation,LitlT(i,:),Fit);
+    BigT(i,:) = polyval(P(i,:),Orientation);
+end
+
+
+BigT_trans = transpose(BigT);
+MaxPoints = max(BigT_trans);
+
+Derp = zeros(1,15);
+Orien = zeros(1,15);
+for i = 1:1:15
+    j=1;
+    while Derp(i) ~= MaxPoints(i) && j <= 181 %finds max at the correct angle
+        Derp(i) = BigT_trans(j,i);
+        j = j+1;
+    end
+    Orien(i) = j;
+end
+
+
+
+
+
+
+
+end
+
